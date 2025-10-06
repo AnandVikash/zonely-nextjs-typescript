@@ -9,19 +9,19 @@ const features = [
     id: 1,
     title: "Verified Expert",
     description: "Trusted guidance from certified professionals.",
-    image: "https://via.placeholder.com/400x400",
+    image: "https://placehold.jp/400x400.png",
   },
   {
     id: 2,
     title: "Real Human Support",
     description: "Friendly assistant when you need it.",
-    image: "https://via.placeholder.com/400x400",
+    image: "https://placehold.jp/400x400.png",
   },
   {
     id: 3,
     title: "Privacy First",
     description: "Your Data is safeguarded.",
-    image: "https://via.placeholder.com/400x400",
+    image: "https://placehold.jp/400x400.png",
   },
 ];
 
@@ -36,14 +36,12 @@ const WhyChooseUs: React.FC = () => {
           <div className="w-20 h-1 bg-orange-500 mx-auto mt-2 rounded-full" />
         </div>
 
-
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {features.map((item) => (
             <div
               key={item.id}
               className="relative rounded-2xl overflow-hidden shadow-lg group"
             >
-
               <Image
                 src={item.image}
                 alt={item.title}
@@ -52,9 +50,7 @@ const WhyChooseUs: React.FC = () => {
                 className="w-full h-[350px] object-cover"
               />
 
-
               <div className="absolute inset-0 bg-gradient-to-t from-orange-600/80 via-orange-500/40 to-transparent opacity-90" />
-
 
               <div className="absolute bottom-6 left-6 right-6 text-white">
                 <h3 className="text-xl font-semibold">{item.title}</h3>

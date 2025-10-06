@@ -11,7 +11,7 @@ const WhoAreBuddies: React.FC = () => {
 
         <div className="w-full lg:w-1/2">
           <Image
-            src="https://via.placeholder.com/600x400"
+            src="https://placehold.jp/600x400.png"
             alt="Who are Buddies?"
             width={600}
             height={400}

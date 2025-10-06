@@ -2,62 +2,154 @@
 
 import React from "react";
 import Container from "@/components/layout/container/Container";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Pagination, Autoplay } from "swiper/modules";
+
+import "swiper/css";
+import "swiper/css/pagination";
 
 const BannerSection: React.FC = () => {
   return (
-    <section
-      className="relative bg-gradient-to-br from-orange-50 to-orange-100 overflow-hidden"
-      style={{
-        backgroundImage: "url('https://placehold.jp/1200x600.png')",
-        backgroundSize: "cover",
-        backgroundPosition: "center",
-      }}
-    >
+    <section className="relative overflow-hidden">
 
-      <div className="absolute inset-0 bg-gradient-to-br from-orange-50 to-orange-100 opacity-70"></div>
+      <Swiper
+        modules={[Pagination, Autoplay]}
+        pagination={{ clickable: true, el: ".custom-pagination" }}
+        autoplay={{ delay: 4000 }}
+        loop={true}
+      >
 
-      <Container className="relative flex flex-col-reverse lg:flex-row items-center justify-between py-12 lg:py-20 gap-10">
-        <div className="text-center lg:text-left max-w-xl z-10">
-          <h1 className="text-4xl md:text-5xl font-bold leading-tight text-gray-900">
-            Talk it out. Anytime.
-            <br /> Anywhere.
-          </h1>
-          <p className="mt-4 text-gray-600 text-lg">
-            Your space to express without judgment. Stay connected and share
-            your thoughts, wherever you are.
-          </p>
+        <SwiperSlide>
+          <div className='relative z-10 bg-[url("/assets/banner/banner11.jpg")] bg-contain backdrop-blur-sm min-h-[300px] lg:min-h-[400px]'>
+            <Container className="flex flex-col-reverse lg:flex-row items-center justify-between py-6 lg:py-10 gap-6">
+              <div className="text-center lg:text-left max-w-xl">
+                <h1 className="text-3xl md:text-4xl font-bold leading-tight text-gray-900">
+                  Talk it out. Anytime.<br /> Anywhere.
+                </h1>
+                <p className="mt-3 text-gray-700 text-base">
+                  Your space to express without judgment. Stay connected and share your thoughts.
+                </p>
 
-          <p className="mt-6 font-semibold">Available on:</p>
-          <div className="flex flex-col sm:flex-row items-center sm:justify-start gap-4 mt-4">
-            <a
-              href="#"
-              className="bg-orange-500 text-white flex items-center gap-2 px-5 py-2 rounded-md shadow hover:bg-orange-600 transition"
-            >
-              <img src="/apple-icon.png" alt="App Store" className="w-6 h-6" />
-              <span>App Store</span>
-            </a>
+                <p className="mt-4 font-semibold">Available on:</p>
+                <div className="flex flex-col sm:flex-row items-center sm:justify-start gap-3 mt-3">
+                  <a
+                    href="#"
+                    className="bg-orange-500 text-white flex items-center gap-2 px-4 py-2 rounded-md shadow hover:bg-orange-600 transition"
+                  >
+                    <img src="/apple-icon.png" alt="App Store" className="w-5 h-5" />
+                    <span>App Store</span>
+                  </a>
 
-            <a
-              href="#"
-              className="bg-orange-500 text-white flex items-center gap-2 px-5 py-2 rounded-md shadow hover:bg-orange-600 transition"
-            >
-              <img
-                src="/google-play-icon.png"
-                alt="Google Play"
-                className="w-6 h-6"
-              />
-              <span>Google Play</span>
-            </a>
+                  <a
+                    href="#"
+                    className="bg-orange-500 text-white flex items-center gap-2 px-4 py-2 rounded-md shadow hover:bg-orange-600 transition"
+                  >
+                    <img src="/assets/banner/icon2.png" alt="Google Play" className="w-5 h-5" />
+                    <span>Google Play</span>
+                  </a>
+                </div>
+              </div>
+
+              <div className="w-full lg:w-1/2 flex justify-center lg:justify-end">
+                <img
+                  src="/assets/banner/boy.png"
+                  alt="Banner Illustration"
+                  className="w-3/4 h-auto object-cover static lg:relative -bottom-10"
+                />
+              </div>
+            </Container>
           </div>
-        </div>
+        </SwiperSlide>
 
-        <div className="w-full lg:w-1/2 flex justify-center lg:justify-end z-10">
-          <img
-            src="https://placehold.jp/500x500.png"
-            alt="Banner Illustration"
-            className="w-full h-auto object-cover rounded-xl shadow-lg"
-          />
-        </div>
+
+        {/* <SwiperSlide>
+          <div className="relative z-10 bg-orange-50/50 backdrop-blur-sm min-h-[300px] lg:min-h-[400px]">
+            <Container className="flex flex-col-reverse lg:flex-row items-center justify-between py-6 lg:py-10 gap-6">
+              <div className="text-center lg:text-left max-w-xl">
+                <h1 className="text-3xl md:text-4xl font-bold leading-tight text-gray-900">
+                  Talk it out. Anytime.<br /> Anywhere.
+                </h1>
+                <p className="mt-3 text-gray-700 text-base">
+                  Your space to express without judgment. Stay connected and share your thoughts.
+                </p>
+
+                <p className="mt-4 font-semibold">Available on:</p>
+                <div className="flex flex-col sm:flex-row items-center sm:justify-start gap-3 mt-3">
+                  <a
+                    href="#"
+                    className="bg-orange-500 text-white flex items-center gap-2 px-4 py-2 rounded-md shadow hover:bg-orange-600 transition"
+                  >
+                    <img src="/apple-icon.png" alt="App Store" className="w-5 h-5" />
+                    <span>App Store</span>
+                  </a>
+
+                  <a
+                    href="#"
+                    className="bg-orange-500 text-white flex items-center gap-2 px-4 py-2 rounded-md shadow hover:bg-orange-600 transition"
+                  >
+                    <img src="/google-play-icon.png" alt="Google Play" className="w-5 h-5" />
+                    <span>Google Play</span>
+                  </a>
+                </div>
+              </div>
+
+              <div className="w-full lg:w-1/2 flex justify-center lg:justify-end">
+                <img
+                  src="https://placehold.jp/500x500.png"
+                  alt="Banner Illustration"
+                  className="w-3/4 h-auto object-cover rounded-xl shadow-lg"
+                />
+              </div>
+            </Container>
+          </div>
+        </SwiperSlide> */}
+
+        {/* <SwiperSlide>
+          <div className="relative z-10 bg-orange-50/50 backdrop-blur-sm min-h-[300px] lg:min-h-[400px]">
+            <Container className="flex flex-col-reverse lg:flex-row items-center justify-between py-6 lg:py-10 gap-6">
+              <div className="text-center lg:text-left max-w-xl">
+                <h1 className="text-3xl md:text-4xl font-bold leading-tight text-gray-900">
+                  Talk it out. Anytime.<br /> Anywhere.
+                </h1>
+                <p className="mt-3 text-gray-700 text-base">
+                  Your space to express without judgment. Stay connected and share your thoughts.
+                </p>
+
+                <p className="mt-4 font-semibold">Available on:</p>
+                <div className="flex flex-col sm:flex-row items-center sm:justify-start gap-3 mt-3">
+                  <a
+                    href="#"
+                    className="bg-orange-500 text-white flex items-center gap-2 px-4 py-2 rounded-md shadow hover:bg-orange-600 transition"
+                  >
+                    <img src="/apple-icon.png" alt="App Store" className="w-5 h-5" />
+                    <span>App Store</span>
+                  </a>
+
+                  <a
+                    href="#"
+                    className="bg-orange-500 text-white flex items-center gap-2 px-4 py-2 rounded-md shadow hover:bg-orange-600 transition"
+                  >
+                    <img src="/google-play-icon.png" alt="Google Play" className="w-5 h-5" />
+                    <span>Google Play</span>
+                  </a>
+                </div>
+              </div>
+
+              <div className="w-full lg:w-1/2 flex justify-center lg:justify-end">
+                <img
+                  src="https://placehold.jp/500x500.png"
+                  alt="Banner Illustration"
+                  className="w-3/4 h-auto object-cover rounded-xl shadow-lg"
+                />
+              </div>
+            </Container>
+          </div>
+        </SwiperSlide> */}
+      </Swiper>
+
+
+      <Container>
+        <div className="custom-pagination flex justify-start pb-6 mt-2" />
       </Container>
     </section>
   );

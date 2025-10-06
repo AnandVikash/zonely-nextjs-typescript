@@ -11,9 +11,9 @@ const AboutSection: React.FC = () => {
 
         <div className="w-full lg:w-1/2 flex justify-center">
           <img
-            src="https://placehold.jp/600 x400.png"
+            src="/assets/aboutus/aboutus.png"
             alt="About Us"
-            className="w-full h-auto rounded-xl shadow-lg object-cover"
+            className="w-full h-auto  object-cover"
           />
         </div>
 

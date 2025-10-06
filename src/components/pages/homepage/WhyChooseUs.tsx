@@ -9,19 +9,19 @@ const features = [
     id: 1,
     title: "Verified Expert",
     description: "Trusted guidance from certified professionals.",
-    image: "https://placehold.jp/400x400.png",
+    image: "/assets/why-choose-us/verifiedexpert.jpg",
   },
   {
     id: 2,
     title: "Real Human Support",
     description: "Friendly assistant when you need it.",
-    image: "https://placehold.jp/400x400.png",
+    image: "/assets/why-choose-us/realhumansupport.jpg",
   },
   {
     id: 3,
     title: "Privacy First",
     description: "Your Data is safeguarded.",
-    image: "https://placehold.jp/400x400.png",
+    image: "/assets/why-choose-us/privacyfirst.jpg",
   },
 ];
 

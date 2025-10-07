@@ -9,11 +9,10 @@ const Footer: React.FC = () => {
   return (
     <footer className="bg-[#2d2d2d] text-white px-8 py-10">
       <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-10">
-
         <div>
           <div className="flex items-center gap-2 mb-4">
             <Image
-              src="/logo-icon.png"
+              src="/assets/images/logo.jpg"
               alt="Zonely Logo"
               width={28}
               height={28}
@@ -27,7 +26,6 @@ const Footer: React.FC = () => {
             Rajnagar Extension, Uttar Pradesh 201017
           </p>
         </div>
-
 
         <div>
           <h3 className="font-semibold mb-4">Quick Links</h3>
@@ -46,7 +44,6 @@ const Footer: React.FC = () => {
             </li>
           </ul>
         </div>
-
 
         <div>
           <h3 className="font-semibold mb-4">Follow Us on</h3>
@@ -78,7 +75,6 @@ const Footer: React.FC = () => {
           </div>
         </div>
       </div>
-
 
       <div className="border-t border-gray-700 mt-8 pt-4 flex flex-col md:flex-row items-center justify-between text-sm text-gray-400">
         <div className="flex gap-6 mb-2 md:mb-0">

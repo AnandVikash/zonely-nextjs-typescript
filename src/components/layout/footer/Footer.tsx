@@ -14,10 +14,10 @@ const Footer: React.FC = () => {
             <Image
               src="/assets/images/logo.jpg"
               alt="Zonely Logo"
-              width={28}
-              height={28}
+              width={100}
+              height={100}
             />
-            <span className="text-2xl font-bold text-orange-500">ZONELY</span>
+            {/* <span className="text-2xl font-bold text-orange-500">ZONELY</span> */}
           </div>
           <p className="font-semibold">Registered Office</p>
           <p className="text-sm text-gray-300 mt-2 leading-relaxed">

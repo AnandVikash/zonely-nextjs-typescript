@@ -9,17 +9,16 @@ const Header: React.FC = () => {
   return (
     <header className="w-full bg-white shadow-sm px-6 py-3">
       <nav className="flex items-center justify-between">
-
         <div className="flex items-center gap-2">
           <Image
-            src="/logo-icon.png"
+            src="/assets/images/logo.jpg"
             alt="Zonely Logo"
-            width={28}
-            height={28}
+            width={100}
+            height={100}
+            className="object-cover  "
           />
-          <span className="text-xl font-bold text-orange-600">ZONELY</span>
+          {/* <span className="text-xl font-bold text-orange-600">ZONELY</span> */}
         </div>
-
 
         <div className="hidden md:flex items-center gap-8 text-gray-600 font-medium">
           <Link href="/">Home</Link>
@@ -28,7 +27,6 @@ const Header: React.FC = () => {
           <Link href="/career">Career</Link>
           <Link href="/contact">Contact Us</Link>
         </div>
-
 
         <div className="flex items-center gap-4">
           <Link

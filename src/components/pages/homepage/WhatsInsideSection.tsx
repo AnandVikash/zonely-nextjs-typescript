@@ -2,7 +2,7 @@
 
 import React, { useRef, useState, useEffect } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Navigation } from "swiper/modules";
+import { Navigation, Autoplay } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/navigation";
 import Image from "next/image";
@@ -37,7 +37,8 @@ const features: Feature[] = [
   },
   {
     title: "Mood o’ Meter",
-    description: "Check in with your moods, daily. Track how you’re feeling, reflect on your mood and earn rewords for simply showing up.",
+    description:
+      "Check in with your moods, daily. Track how you’re feeling, reflect on your mood and earn rewords for simply showing up.",
     icon: "/assets/icons/icon5.png",
   },
 ];
@@ -65,7 +66,7 @@ const WhatsInsideSection: React.FC = () => {
       <div className="max-w-6xl mx-auto relative">
         {swiperReady && (
           <Swiper
-            modules={[Navigation]}
+            modules={[Navigation, Autoplay]}
             spaceBetween={20}
             slidesPerView={1}
             breakpoints={{
@@ -73,14 +74,18 @@ const WhatsInsideSection: React.FC = () => {
               1024: { slidesPerView: 3 },
               1280: { slidesPerView: 4 },
             }}
+            autoplay={{
+              delay: 3000, // 3 seconds delay between slides
+              disableOnInteraction: false, // Continue autoplay after user interaction
+            }}
             navigation={{
               prevEl: prevRef.current,
               nextEl: nextRef.current,
             }}
           >
-            {features.map((feature, idx) => (
-              <SwiperSlide key={idx}>
-                <div className="relative bg-white rounded-2xl shadow-md flex flex-col items-center justify-center cursor-pointer overflow-hidden group h-64">
+            {features.map((feature, id) => (
+              <SwiperSlide key={id}>
+                <div className="relative bg-white rounded-2xl shadow-xl flex flex-col items-center justify-center cursor-pointer overflow-hidden group h-64">
                   {/* Default view */}
                   <div className="flex flex-col items-center justify-center absolute inset-0 z-10 transform transition-all duration-500 ease-in-out group-hover:-translate-y-10 group-hover:opacity-0">
                     <Image
@@ -90,13 +95,19 @@ const WhatsInsideSection: React.FC = () => {
                       height={64}
                       className="mb-2"
                     />
-                    <h3 className="font-semibold text-lg mt-4">{feature.title}</h3>
+                    <h3 className="font-semibold text-lg mt-4">
+                      {feature.title}
+                    </h3>
                   </div>
 
                   {/* Hover view */}
                   <div className="absolute inset-0 bg-gradient-to-t from-orange-500 to-orange-400 text-white flex flex-col items-center justify-center px-4 py-6 transform translate-y-full transition-all duration-500 ease-in-out group-hover:translate-y-0 group-hover:opacity-100">
-                    <h3 className="font-semibold text-lg text-center">{feature.title}</h3>
-                    <p className="text-sm text-center mt-2">{feature.description}</p>
+                    <h3 className="font-semibold text-lg text-center">
+                      {feature.title}
+                    </h3>
+                    <p className="text-sm text-center mt-2">
+                      {feature.description}
+                    </p>
                   </div>
                 </div>
               </SwiperSlide>

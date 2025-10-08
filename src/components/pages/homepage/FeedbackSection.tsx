@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useRef } from "react";
+import React, { useRef, useState } from "react";
 import Container from "@/components/layout/container/Container";
 
 const testimonials = [
@@ -44,6 +44,7 @@ const testimonials = [
 
 const FeedbackSection: React.FC = () => {
   const containerRef = useRef<HTMLDivElement>(null);
+  const [currentCardIndex, setCurrentCardIndex] = useState(0);
 
   // Scroll one card smoothly
   const handleScroll = () => {
@@ -57,13 +58,29 @@ const FeedbackSection: React.FC = () => {
       }
     }
   };
-
   //Auto scroll every 3 seconds
   React.useEffect(() => {
     const interval = setInterval(() => {
       handleScroll();
     }, 3000);
     return () => clearInterval(interval);
+  }, []);
+
+  // Sync pagination with scroll position
+  React.useEffect(() => {
+    const current = containerRef.current;
+    if (!current) return;
+
+    const updateIndex = () => {
+      const cardHeight = current.children[0]?.clientHeight || 0;
+      const gap = 24;
+      // Calculate the index of the card that is currently in view
+      const newIndex = Math.round(current.scrollTop / (cardHeight + gap));
+      setCurrentCardIndex(newIndex);
+    };
+
+    current.addEventListener("scroll", updateIndex);
+    return () => current.removeEventListener("scroll", updateIndex);
   }, []);
 
   // again scroll to top when reaching the bottom
@@ -113,7 +130,7 @@ const FeedbackSection: React.FC = () => {
 
             <div
               ref={containerRef}
-              className="px-6 py-6 flex flex-col gap-6 overflow-auto h-[600px] scroll-smooth"
+              className="px-6 py-6 flex flex-col gap-6 overflow-hidden h-[600px] scroll-smooth"
             >
               {testimonials.map((t) => (
                 <div
@@ -179,6 +196,28 @@ const FeedbackSection: React.FC = () => {
               className="absolute bottom-6 left-1/2 transform -translate-x-1/2 w-10 h-10 bg-orange-500 rounded-full flex items-center justify-center text-white text-lg cursor-pointer select-none"
             >
               ↓
+            </div>
+
+            {/* Pagination Bullets - Positioned on the right */}
+            <div className="absolute top-1/2 right-1 transform -translate-y-1/2 flex flex-col gap-2">
+              {/* The loop now only runs for 3 bullets */}
+              {Array.from({ length: 4 }).map((_, index) => (
+                <button
+                  key={index}
+                  onClick={() => {
+                    // You would need to map these to specific testimonials if you want them clickable
+                    // For example, 0 -> testimonial 1, 1 -> testimonial 3, 2 -> testimonial 5
+                    // Or simply remove the onClick to make them purely visual
+                  }}
+                  className={`w-2 h-8 rounded-full transition-colors ${
+                    // You'll need to define the active state logic for three bullets
+                    index === Math.floor(currentCardIndex / 1)
+                      ? "bg-orange-500"
+                      : "bg-gray-300"
+                  }`}
+                  aria-label={`Go to testimonial group ${index + 1}`}
+                />
+              ))}
             </div>
           </div>
         </div>

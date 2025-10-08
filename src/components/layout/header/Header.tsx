@@ -11,9 +11,9 @@ const Header: React.FC = () => {
       <nav className="flex items-center justify-between">
         <div className="flex items-center gap-2">
           <Image
-            src="/assets/images/logo.jpg"
+            src="/assets/images/logo.png"
             alt="Zonely Logo"
-            width={100}
+            width={150}
             height={100}
             className="object-cover  "
           />

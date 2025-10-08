@@ -12,9 +12,9 @@ const Footer: React.FC = () => {
         <div>
           <div className="flex items-center gap-2 mb-4">
             <Image
-              src="/assets/images/logo.jpg"
+              src="/assets/images/logo.png"
               alt="Zonely Logo"
-              width={100}
+              width={150}
               height={100}
             />
             {/* <span className="text-2xl font-bold text-orange-500">ZONELY</span> */}

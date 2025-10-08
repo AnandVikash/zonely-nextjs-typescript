@@ -22,10 +22,10 @@ const Header: React.FC = () => {
 
         <div className="hidden md:flex items-center gap-8 text-gray-600 font-medium">
           <Link href="/">Home</Link>
-          <Link href="/about">About Us</Link>
-          <Link href="/inside">What’s Inside</Link>
-          <Link href="/career">Career</Link>
-          <Link href="/contact">Contact Us</Link>
+          <Link href="#about">About Us</Link>
+          <Link href="#inside">What’s Inside</Link>
+          <Link href="#career">Career</Link>
+          <Link href="#contact">Contact Us</Link>
         </div>
 
         <div className="flex items-center gap-4">

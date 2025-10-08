@@ -53,7 +53,7 @@ const WhatsInsideSection: React.FC = () => {
   }, []);
 
   return (
-    <section className="bg-orange-50 py-16">
+    <section className="bg-orange-50 py-16" id="#inside">
       <div className="text-center mb-10">
         <h2 className="text-3xl font-bold text-gray-900">What’s Inside</h2>
         <div className="w-20 h-1 bg-orange-500 mt-2 mb-6 rounded-full inline-block"></div>
@@ -84,7 +84,7 @@ const WhatsInsideSection: React.FC = () => {
             }}
           >
             {features.map((feature, id) => (
-              <SwiperSlide key={id}>
+              <SwiperSlide key={id} className="py-10">
                 <div className="relative bg-white rounded-2xl shadow-xl flex flex-col items-center justify-center cursor-pointer overflow-hidden group h-64">
                   {/* Default view */}
                   <div className="flex flex-col items-center justify-center absolute inset-0 z-10 transform transition-all duration-500 ease-in-out group-hover:-translate-y-10 group-hover:opacity-0">

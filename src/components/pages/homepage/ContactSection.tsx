@@ -11,22 +11,24 @@ const ContactSection: React.FC = () => {
   };
 
   return (
-    <section className="py-20 bg-white">
+    <section className="py-20 bg-white" id="#contact">
       <div className="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-2 gap-10 items-start">
-
         <div>
-          <h2 className="text-3xl font-bold text-gray-900 mb-2">Get In Touch</h2>
+          <h2 className="text-3xl font-bold text-gray-900 mb-2">
+            Get In Touch
+          </h2>
           <div className="w-16 h-1 bg-orange-500 mb-6"></div>
 
           <p className="font-semibold text-gray-800 mb-3">
-            Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+            Lorem Ipsum is simply dummy text of the printing and typesetting
+            industry.
           </p>
 
           <p className="text-gray-600 mb-3">
-            Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-            Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+            Lorem Ipsum is simply dummy text of the printing and typesetting
+            industry. Lorem Ipsum is simply dummy text of the printing and
+            typesetting industry.
           </p>
-
 
           <div className="flex items-start gap-3 mt-6">
             <div className="text-orange-500 text-2xl mt-1">
@@ -38,7 +40,6 @@ const ContactSection: React.FC = () => {
             </div>
           </div>
         </div>
-
 
         <form onSubmit={handleSubmit} className="space-y-4">
           <input

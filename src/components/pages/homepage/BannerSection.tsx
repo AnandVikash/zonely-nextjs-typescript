@@ -18,7 +18,7 @@ const BannerSection: React.FC = () => {
         loop={true}
       >
         <SwiperSlide>
-          <div className='relative z-10 bg-[url("/assets/banner/banner11.jpg")] bg-contain backdrop-blur-sm min-h-[300px] lg:min-h-[400px]'>
+          <div className='relative z-10 bg-[url("/assets/banner/banner11.jpg")] bg-cover bg-top-right backdrop-blur-sm min-h-[300px] lg:min-h-[400px]'>
             <Container className="flex flex-col-reverse lg:flex-row items-center justify-between py-6 lg:py-10 gap-6">
               <div className="text-center lg:text-left max-w-xl">
                 <h1 className="text-3xl md:text-4xl font-bold leading-tight text-gray-900">

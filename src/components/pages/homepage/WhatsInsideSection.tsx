@@ -6,6 +6,7 @@ import { Navigation, Autoplay } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/navigation";
 import Image from "next/image";
+import { Swiper as SwiperType } from "swiper";
 
 interface Feature {
   title: string;
@@ -38,7 +39,7 @@ const features: Feature[] = [
   {
     title: "Mood o’ Meter",
     description:
-      "Check in with your moods, daily. Track how you’re feeling, reflect on your mood and earn rewords for simply showing up.",
+      "Check in with your moods, daily. Track how you’re feeling, reflect on your mood and earn rewards for simply showing up.",
     icon: "/assets/icons/icon5.png",
   },
 ];
@@ -47,13 +48,14 @@ const WhatsInsideSection: React.FC = () => {
   const prevRef = useRef<HTMLDivElement>(null);
   const nextRef = useRef<HTMLDivElement>(null);
   const [swiperReady, setSwiperReady] = useState(false);
+  const swiperRef = useRef<SwiperType | null>(null);
 
   useEffect(() => {
     setSwiperReady(true);
   }, []);
 
   return (
-    <section className="bg-orange-50 py-16" id="#inside">
+    <section className="bg-orange-50 py-16" id="inside">
       <div className="text-center mb-10">
         <h2 className="text-3xl font-bold text-gray-900">What’s Inside</h2>
         <div className="w-20 h-1 bg-orange-500 mt-2 mb-6 rounded-full inline-block"></div>
@@ -82,10 +84,17 @@ const WhatsInsideSection: React.FC = () => {
               prevEl: prevRef.current,
               nextEl: nextRef.current,
             }}
+            onSwiper={(swiper) => {
+              swiperRef.current = swiper;
+            }}
           >
             {features.map((feature, id) => (
               <SwiperSlide key={id} className="py-10">
-                <div className="relative bg-white rounded-2xl shadow-xl flex flex-col items-center justify-center cursor-pointer overflow-hidden group h-64">
+                <div
+                  className="relative bg-white rounded-2xl shadow-xl flex flex-col items-center justify-center cursor-pointer overflow-hidden group h-64"
+                  onMouseEnter={() => swiperRef.current?.autoplay.stop()}
+                  onMouseLeave={() => swiperRef.current?.autoplay.start()}
+                >
                   {/* Default view */}
                   <div className="flex flex-col items-center justify-center absolute inset-0 z-10 transform transition-all duration-500 ease-in-out group-hover:-translate-y-10 group-hover:opacity-0">
                     <Image

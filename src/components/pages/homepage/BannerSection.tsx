@@ -18,19 +18,20 @@ const BannerSection: React.FC = () => {
         loop={true}
       >
         <SwiperSlide>
-          <div className='relative z-10 bg-[url("/assets/banner/banner11.jpg")] bg-cover bg-top-right backdrop-blur-sm min-h-[300px] lg:min-h-[400px]'>
-            <Container className="flex flex-col-reverse lg:flex-row items-center justify-between py-6 lg:py-10 gap-6">
-              <div className="text-center lg:text-left max-w-xl">
-                <h1 className="text-3xl md:text-4xl font-bold leading-tight text-gray-900">
-                  Talk it out. Anytime.
-                  <br /> Anywhere.
+          <div className='relative z-10 bg-[url("/assets/banner/banner12.jpg")] bg-cover bg-no-repeat bg-top-right backdrop-blur-sm min-h-[300px] lg:min-h-[400px] flex'>
+            <Container className="flex flex-col-reverse lg:flex-row items-center justify-between w-full h-full py-2 lg:py-16 gap-6 relative">
+
+
+              <div className="text-center lg:text-left max-w-xl self-center z-10">
+                <h1 className="text-3xl md:text-5xl font-bold leading-tight text-gray-900">
+                  You don’t have to keep it all inside share it here
                 </h1>
-                <p className="mt-3 text-gray-700 text-base">
-                  Your space to express without judgment. Stay connected and
-                  share your thoughts.
+                <p className="mt-3 text-gray-700 text-base md:text-lg">
+                  Zonely is your safe, judgment-free space for real conversations — chat or call with friendly Buddies anytime
+                  NOT a dating app
                 </p>
 
-                <p className="mt-4 font-semibold">Available on:</p>
+                <p className="mt-5 font-semibold">Available on:</p>
                 <div className="flex flex-col sm:flex-row items-center sm:justify-start gap-3 mt-3">
                   <a
                     href="#"
@@ -45,7 +46,7 @@ const BannerSection: React.FC = () => {
                   </a>
 
                   <a
-                    href="#"
+                    href="https://play.google.com/store/apps/details?id=com.zonely.zonelyapp"
                     className="bg-orange-500 text-white flex items-center gap-2 px-4 py-2 rounded-md shadow hover:bg-orange-600 transition"
                   >
                     <img
@@ -58,100 +59,18 @@ const BannerSection: React.FC = () => {
                 </div>
               </div>
 
-              <div className="w-full lg:w-1/2 flex justify-center lg:justify-end">
+
+              <div className="w-full lg:w-1/2 flex justify-center lg:justify-end relative h-full">
                 <img
                   src="/assets/banner/boy.png"
                   alt="Banner Illustration"
-                  className="w-3/4 h-auto object-cover static lg:relative -bottom-10"
+                  className="w-2/3 sm:w-1/2 lg:w-auto h-auto object-contain relative translate-y-6 lg:translate-y-16"
                 />
               </div>
+
             </Container>
           </div>
         </SwiperSlide>
-
-        {/* <SwiperSlide>
-          <div className="relative z-10 bg-orange-50/50 backdrop-blur-sm min-h-[300px] lg:min-h-[400px]">
-            <Container className="flex flex-col-reverse lg:flex-row items-center justify-between py-6 lg:py-10 gap-6">
-              <div className="text-center lg:text-left max-w-xl">
-                <h1 className="text-3xl md:text-4xl font-bold leading-tight text-gray-900">
-                  Talk it out. Anytime.<br /> Anywhere.
-                </h1>
-                <p className="mt-3 text-gray-700 text-base">
-                  Your space to express without judgment. Stay connected and share your thoughts.
-                </p>
-
-                <p className="mt-4 font-semibold">Available on:</p>
-                <div className="flex flex-col sm:flex-row items-center sm:justify-start gap-3 mt-3">
-                  <a
-                    href="#"
-                    className="bg-orange-500 text-white flex items-center gap-2 px-4 py-2 rounded-md shadow hover:bg-orange-600 transition"
-                  >
-                    <img src="/apple-icon.png" alt="App Store" className="w-5 h-5" />
-                    <span>App Store</span>
-                  </a>
-
-                  <a
-                    href="#"
-                    className="bg-orange-500 text-white flex items-center gap-2 px-4 py-2 rounded-md shadow hover:bg-orange-600 transition"
-                  >
-                    <img src="/google-play-icon.png" alt="Google Play" className="w-5 h-5" />
-                    <span>Google Play</span>
-                  </a>
-                </div>
-              </div>
-
-              <div className="w-full lg:w-1/2 flex justify-center lg:justify-end">
-                <img
-                  src="https://placehold.jp/500x500.png"
-                  alt="Banner Illustration"
-                  className="w-3/4 h-auto object-cover rounded-xl shadow-lg"
-                />
-              </div>
-            </Container>
-          </div>
-        </SwiperSlide> */}
-
-        {/* <SwiperSlide>
-          <div className="relative z-10 bg-orange-50/50 backdrop-blur-sm min-h-[300px] lg:min-h-[400px]">
-            <Container className="flex flex-col-reverse lg:flex-row items-center justify-between py-6 lg:py-10 gap-6">
-              <div className="text-center lg:text-left max-w-xl">
-                <h1 className="text-3xl md:text-4xl font-bold leading-tight text-gray-900">
-                  Talk it out. Anytime.<br /> Anywhere.
-                </h1>
-                <p className="mt-3 text-gray-700 text-base">
-                  Your space to express without judgment. Stay connected and share your thoughts.
-                </p>
-
-                <p className="mt-4 font-semibold">Available on:</p>
-                <div className="flex flex-col sm:flex-row items-center sm:justify-start gap-3 mt-3">
-                  <a
-                    href="#"
-                    className="bg-orange-500 text-white flex items-center gap-2 px-4 py-2 rounded-md shadow hover:bg-orange-600 transition"
-                  >
-                    <img src="/apple-icon.png" alt="App Store" className="w-5 h-5" />
-                    <span>App Store</span>
-                  </a>
-
-                  <a
-                    href="#"
-                    className="bg-orange-500 text-white flex items-center gap-2 px-4 py-2 rounded-md shadow hover:bg-orange-600 transition"
-                  >
-                    <img src="/google-play-icon.png" alt="Google Play" className="w-5 h-5" />
-                    <span>Google Play</span>
-                  </a>
-                </div>
-              </div>
-
-              <div className="w-full lg:w-1/2 flex justify-center lg:justify-end">
-                <img
-                  src="https://placehold.jp/500x500.png"
-                  alt="Banner Illustration"
-                  className="w-3/4 h-auto object-cover rounded-xl shadow-lg"
-                />
-              </div>
-            </Container>
-          </div>
-        </SwiperSlide> */}
       </Swiper>
 
       <Container>

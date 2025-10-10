@@ -7,15 +7,15 @@ const HowItsWork = () => {
     <section className="sm:py-16 " id="work">
       <Container width>
         <section className="">
-          <div className="text-center mb-10">
+          <div className="text-center mb-20">
             <h2 className="text-3xl font-bold text-gray-900">How It Works</h2>
             <div className="w-20 h-1 bg-orange-500 mt-2 mb-6 rounded-full inline-block"></div>
           </div>
-          <div className="grid grid-cols-1 sm:grid-cols-3 gap-30 sm:gap-10 relative py-20 ">
-            <div className="flex flex-col items-center justify-center p-5 shadow-2xl rounded-xl  relative pt-24 bg-white mb-3 sm:mb-0">
-              <div className="absolute -top-25">
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-30 sm:gap-10 relative py-10 sm:py-20 ">
+            <div className="flex flex-col items-center justify-center p-5 shadow-2xl rounded-xl  relative pt-24 bg-white mb-5 sm:mb-0">
+              <div className="absolute -top-28">
                 <Image
-                  src="/assets/work/img-1.png"
+                  src="/assets/work/pickyouevibe.png"
                   alt="Pick your vibe"
                   width={300}
                   height={200}
@@ -35,10 +35,10 @@ const HowItsWork = () => {
             </div>
             <div className="hidden sm:block w-20 h-1 bg-orange-500 mt-2 mb-6  absolute bottom-70 left-90 -z-1"></div>
 
-            <div className="flex flex-col items-center justify-center p-5 shadow-2xl rounded-xl  relative pt-24 bg-white mb-3 sm:mb-0">
-              <div className="absolute -top-25">
+            <div className="flex flex-col items-center justify-center p-5 shadow-2xl rounded-xl  relative pt-24 bg-white mb-8 sm:mb-0">
+              <div className="absolute -top-35">
                 <Image
-                  src="/assets/work/img-1.png"
+                  src="/assets/work/startachat.png"
                   alt="Start the chat"
                   width={300}
                   height={200}
@@ -61,9 +61,9 @@ const HowItsWork = () => {
             <div className="hidden sm:block w-20 h-1 bg-orange-500 mt-2 mb-6  absolute bottom-30 right-90 -z-50 "></div>
 
             <div className="flex flex-col items-center justify-center p-5 shadow-2xl rounded-xl  relative pt-24 bg-white">
-              <div className="absolute -top-25">
+              <div className="absolute -top-35">
                 <Image
-                  src="/assets/work/img-1.png"
+                  src="/assets/work/enjoythemovement.png"
                   alt="Enjoy the moment"
                   width={300}
                   height={200}

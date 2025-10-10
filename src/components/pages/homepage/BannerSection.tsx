@@ -19,16 +19,15 @@ const BannerSection: React.FC = () => {
       >
         <SwiperSlide>
           <div className='relative z-10 bg-[url("/assets/banner/banner12.jpg")] bg-cover bg-no-repeat bg-top-right backdrop-blur-sm min-h-[300px] lg:min-h-[400px] flex'>
-            <Container className="flex flex-col-reverse lg:flex-row items-center justify-between w-full h-full py-2 lg:py-16 gap-6 relative">
-
-
+            <Container className="flex flex-col-reverse lg:flex-row items-center justify-between w-full h-full py-2  gap-6 relative">
               <div className="text-center lg:text-left max-w-xl self-center z-10">
                 <h1 className="text-3xl md:text-5xl font-bold leading-tight text-gray-900">
                   You don’t have to keep it all inside share it here
                 </h1>
                 <p className="mt-3 text-gray-700 text-base md:text-lg">
-                  Zonely is your safe, judgment-free space for real conversations — chat or call with friendly Buddies anytime
-                  NOT a dating app
+                  Zonely is your safe, judgment-free space for real
+                  conversations — chat or call with friendly Buddies anytime NOT
+                  a dating app
                 </p>
 
                 <p className="mt-5 font-semibold">Available on:</p>
@@ -59,7 +58,6 @@ const BannerSection: React.FC = () => {
                 </div>
               </div>
 
-
               <div className="w-full lg:w-1/2 flex justify-center lg:justify-end relative h-full">
                 <img
                   src="/assets/banner/boy.png"
@@ -67,7 +65,6 @@ const BannerSection: React.FC = () => {
                   className="w-2/3 sm:w-1/2 lg:w-auto h-auto object-contain relative translate-y-6 lg:translate-y-16"
                 />
               </div>
-
             </Container>
           </div>
         </SwiperSlide>

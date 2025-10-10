@@ -4,6 +4,7 @@ import React from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { Linkedin, Facebook, Instagram, Youtube, Twitter } from "lucide-react";
+import { FaXTwitter } from "react-icons/fa6";
 
 const Footer: React.FC = () => {
   return (
@@ -33,7 +34,7 @@ const Footer: React.FC = () => {
               <Link href="/">Home</Link>
             </li>
             <li>
-              <Link href="/about">About Us</Link>
+              <Link href="/what-is-zonely">What is Zonely</Link>
             </li>
             <li>
               <Link href="/features">Features</Link>
@@ -81,7 +82,7 @@ const Footer: React.FC = () => {
               target="_blank"
               className="bg-orange-500 p-2 rounded-full hover:bg-orange-600 transition"
             >
-              <Twitter className="text-white" size={18} />
+              <FaXTwitter className="text-white" size={18} />
             </Link>
           </div>
         </div>

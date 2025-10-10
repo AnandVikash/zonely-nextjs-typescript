@@ -12,7 +12,7 @@ const HowItsWork = () => {
             <div className="w-20 h-1 bg-orange-500 mt-2 mb-6 rounded-full inline-block"></div>
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-30 sm:gap-10 relative py-20 ">
-            <div className="flex flex-col items-center justify-center p-5 shadow-2xl rounded-xl border relative pt-24 mb-3 sm:mb-0">
+            <div className="flex flex-col items-center justify-center p-5 shadow-2xl rounded-xl border relative pt-24 bg-white mb-3 sm:mb-0">
               <div className="absolute -top-25">
                 <Image
                   src="/assets/work/img-1.png"
@@ -23,7 +23,9 @@ const HowItsWork = () => {
                 />
               </div>
               <div className="flex flex-col justify-center items-center ">
-                <p className="text-orange-500 mb-2  ">STEP 1</p>
+                <p className="text-orange-500 mb-2  tracking-[4] font-medium ">
+                  STEP 1
+                </p>
                 <h3 className="text-2xl font-medium mb-3">Pick your vibe</h3>
                 <p className="text-center">
                   Feeling chatty, bored, lonely, or just want to talk? Choose
@@ -31,9 +33,9 @@ const HowItsWork = () => {
                 </p>
               </div>
             </div>
-            <div className="hidden sm:block w-11 h-1 bg-orange-500 mt-2 mb-6  absolute bottom-70 left-97 -z-1"></div>
+            <div className="hidden sm:block w-20 h-1 bg-orange-500 mt-2 mb-6  absolute bottom-70 left-90 -z-1"></div>
 
-            <div className="flex flex-col items-center justify-center p-5 shadow-2xl rounded-xl border relative pt-24 mb-3 sm:mb-0">
+            <div className="flex flex-col items-center justify-center p-5 shadow-2xl rounded-xl border relative pt-24 bg-white mb-3 sm:mb-0">
               <div className="absolute -top-25">
                 <Image
                   src="/assets/work/img-1.png"
@@ -44,7 +46,9 @@ const HowItsWork = () => {
                 />
               </div>
               <div className="flex flex-col justify-center items-center ">
-                <p className="text-orange-500   mb-2">STEP 2</p>
+                <p className="text-orange-500   mb-2 tracking-[4] font-medium ">
+                  STEP 2
+                </p>
                 <h3 className="text-2xl font-medium mb-3">Start the chat</h3>
                 <p className="text-center">
                   Hop into a friendly conversation , text or voice. Talk about
@@ -54,9 +58,9 @@ const HowItsWork = () => {
               </div>
             </div>
 
-            <div className="hidden sm:block w-11 h-1 bg-orange-500 mt-2 mb-6  absolute bottom-30 right-97 "></div>
+            <div className="hidden sm:block w-20 h-1 bg-orange-500 mt-2 mb-6  absolute bottom-30 right-90 -z-50 "></div>
 
-            <div className="flex flex-col items-center justify-center p-5 shadow-2xl rounded-xl border relative pt-24">
+            <div className="flex flex-col items-center justify-center p-5 shadow-2xl rounded-xl border relative pt-24 bg-white">
               <div className="absolute -top-25">
                 <Image
                   src="/assets/work/img-1.png"
@@ -67,7 +71,9 @@ const HowItsWork = () => {
                 />
               </div>
               <div className="flex flex-col justify-center items-center ">
-                <p className="text-orange-500   mb-2 ">STEP 3</p>
+                <p className="text-orange-500 tracking-[4] font-medium  mb-2 ">
+                  STEP 3
+                </p>
                 <h3 className="text-2xl font-medium mb-3">Enjoy the moment</h3>
                 <p className="text-center">
                   Sometimes, a good chat is all you need to unwind or share a

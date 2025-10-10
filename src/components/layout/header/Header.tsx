@@ -50,17 +50,14 @@ const Header: React.FC = () => {
             <a href="#home" onClick={(e) => handleScroll(e, "home")}>
               Home
             </a>
-            <a
-              href="#what-is-zonely"
-              onClick={(e) => handleScroll(e, "what-is-zonely")}
-            >
+            <a href="#about" onClick={(e) => handleScroll(e, "about")}>
               What is Zonely
             </a>
             <a href="#inside" onClick={(e) => handleScroll(e, "inside")}>
               What’s Inside
             </a>
             <a href="#career" onClick={(e) => handleScroll(e, "career")}>
-              Career
+              Buddy Zone
             </a>
             <a href="#contact" onClick={(e) => handleScroll(e, "contact")}>
               Contact Us

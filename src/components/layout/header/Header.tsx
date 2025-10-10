@@ -67,13 +67,13 @@ const Header: React.FC = () => {
             </a>
           </div>
 
-          <Link
+          {/* <Link
             href="/signup"
             className="flex items-center gap-1 text-orange-600 font-medium whitespace-nowrap"
           >
             <User size={18} />
             Signup
-          </Link>
+          </Link> */}
           <Link
             href="https://play.google.com/store/apps/details?id=com.zonely.zonelyapp"
             className="bg-orange-600 text-white px-4 py-2 rounded-md font-medium hover:bg-orange-700 transition whitespace-nowrap"

@@ -4,8 +4,9 @@ import React from "react";
 import Container from "@/components/layout/container/Container";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Pagination, Autoplay } from "swiper/modules";
-import Image from "next/image";
-import Link from "next/link";
+
+import "swiper/css";
+import "swiper/css/pagination";
 
 const BannerSection: React.FC = () => {
   return (
@@ -18,72 +19,57 @@ const BannerSection: React.FC = () => {
       >
         <SwiperSlide>
           <div className='relative z-10 bg-[url("/assets/banner/banner12.jpg")] bg-cover bg-no-repeat bg-top-right backdrop-blur-sm min-h-[300px] lg:min-h-[400px] flex'>
-            <Container className="flex flex-col-reverse lg:flex-row items-center justify-between w-full h-full py-2  gap-6 relative">
-              <div className="text-center lg:text-left max-w-xl self-center z-10">
-                <h1 className="bannerTitle leading-tight">
+            <Container className="flex flex-col-reverse lg:flex-row items-center justify-between w-full h-full py-6 lg:py-16 gap-6 relative">
+
+              <div className="order-2 lg:order-1 text-center lg:text-left max-w-xl self-center z-10">
+                <h1 className="text-3xl md:text-5xl font-bold leading-tight text-gray-900">
                   You don’t have to keep it all inside share it here
                 </h1>
-                <p className="mb-8">
-                  Zonely is your safe, judgment-free space for real
-                  conversations — chat or call with friendly Buddies anytime NOT
-                  a dating app
+                <p className="mt-3 text-gray-700 text-base md:text-lg">
+                  Zonely is your safe, judgment-free space for real conversations — chat or call with friendly Buddies anytime
+                  NOT a dating app
                 </p>
 
-                <p className="font-bold">Available on:</p>
-                <div className="flex flex-col sm:flex-row items-center sm:justify-start gap-5 mt-3">
-                  <Link
+                <div className="flex flex-col items-start px-4 sm:px-0">
+                  <p className="mt-5 font-semibold">Available on:</p>
+                </div>
+
+                <div className="flex  flex-row items-center sm:justify-start gap-3 mt-3">
+                  <a
                     href="#"
-                    className="bg-[var(--primary)] text-white flex items-center gap-5 btnLink"
+                    className="bg-orange-500 text-white flex items-center gap-2 px-4 py-2 rounded-md shadow hover:bg-orange-600 transition"
                   >
-                    <Image
+                    <img
                       src="/assets/banner/icon1.png"
                       alt="App Store"
-                      width={30}
-                      height={30}
-                      className="object-cover"
+                      className="w-5 h-5"
                     />
+                    <span>App Store</span>
+                  </a>
 
-                    <div className="">
-                      <span className="text-white text-xs">
-                        Download on the
-                      </span>
-                      <p className="text-xl text-white font-semibold">
-                        App Store
-                      </p>
-                    </div>
-                  </Link>
-
-                  <Link
+                  <a
                     href="https://play.google.com/store/apps/details?id=com.zonely.zonelyapp"
-                    className="bg-[var(--primary)] text-white flex items-center gap-5 btnLink"
+                    className="bg-orange-500 text-white flex items-center gap-2 px-4 py-2 rounded-md shadow hover:bg-orange-600 transition"
                   >
-                    <Image
+                    <img
                       src="/assets/banner/icon2.png"
                       alt="Google Play"
-                      width={30}
-                      height={30}
-                      className="object-cover"
+                      className="w-5 h-5"
                     />
-
-                    <div>
-                      <span className="text-white text-xs">
-                        Download on the
-                      </span>
-                      <p className="text-xl text-white font-semibold">
-                        Google Play
-                      </p>
-                    </div>
-                  </Link>
+                    <span>Google Play</span>
+                  </a>
                 </div>
               </div>
 
-              <div className="w-full lg:w-1/2 flex justify-center lg:justify-end relative h-full">
+
+              <div className=" order-1 lg:order-2 w-full lg:w-1/2 flex justify-center lg:justify-end relative h-full">
                 <img
                   src="/assets/banner/boy.png"
                   alt="Banner Illustration"
                   className="w-2/3 sm:w-1/2 lg:w-auto h-auto object-contain relative translate-y-6 lg:translate-y-16"
                 />
               </div>
+
             </Container>
           </div>
         </SwiperSlide>

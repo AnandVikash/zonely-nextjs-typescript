@@ -4,9 +4,8 @@ import React from "react";
 import Container from "@/components/layout/container/Container";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Pagination, Autoplay } from "swiper/modules";
-
-import "swiper/css";
-import "swiper/css/pagination";
+import Image from "next/image";
+import Link from "next/link";
 
 const BannerSection: React.FC = () => {
   return (
@@ -21,40 +20,60 @@ const BannerSection: React.FC = () => {
           <div className='relative z-10 bg-[url("/assets/banner/banner12.jpg")] bg-cover bg-no-repeat bg-top-right backdrop-blur-sm min-h-[300px] lg:min-h-[400px] flex'>
             <Container className="flex flex-col-reverse lg:flex-row items-center justify-between w-full h-full py-2  gap-6 relative">
               <div className="text-center lg:text-left max-w-xl self-center z-10">
-                <h1 className="text-3xl md:text-5xl font-bold leading-tight text-gray-900">
+                <h1 className="bannerTitle leading-tight">
                   You don’t have to keep it all inside share it here
                 </h1>
-                <p className="mt-3 text-gray-700 text-base md:text-lg">
+                <p className="mb-8">
                   Zonely is your safe, judgment-free space for real
                   conversations — chat or call with friendly Buddies anytime NOT
                   a dating app
                 </p>
 
-                <p className="mt-5 font-semibold">Available on:</p>
-                <div className="flex flex-col sm:flex-row items-center sm:justify-start gap-3 mt-3">
-                  <a
+                <p className="font-bold">Available on:</p>
+                <div className="flex flex-col sm:flex-row items-center sm:justify-start gap-5 mt-3">
+                  <Link
                     href="#"
-                    className="bg-orange-500 text-white flex items-center gap-2 px-4 py-2 rounded-md shadow hover:bg-orange-600 transition"
+                    className="bg-[var(--primary)] text-white flex items-center gap-5 btnLink"
                   >
-                    <img
+                    <Image
                       src="/assets/banner/icon1.png"
                       alt="App Store"
-                      className="w-5 h-5"
+                      width={30}
+                      height={30}
+                      className="object-cover"
                     />
-                    <span>App Store</span>
-                  </a>
 
-                  <a
+                    <div className="">
+                      <span className="text-white text-xs">
+                        Download on the
+                      </span>
+                      <p className="text-xl text-white font-semibold">
+                        App Store
+                      </p>
+                    </div>
+                  </Link>
+
+                  <Link
                     href="https://play.google.com/store/apps/details?id=com.zonely.zonelyapp"
-                    className="bg-orange-500 text-white flex items-center gap-2 px-4 py-2 rounded-md shadow hover:bg-orange-600 transition"
+                    className="bg-[var(--primary)] text-white flex items-center gap-5 btnLink"
                   >
-                    <img
+                    <Image
                       src="/assets/banner/icon2.png"
                       alt="Google Play"
-                      className="w-5 h-5"
+                      width={30}
+                      height={30}
+                      className="object-cover"
                     />
-                    <span>Google Play</span>
-                  </a>
+
+                    <div>
+                      <span className="text-white text-xs">
+                        Download on the
+                      </span>
+                      <p className="text-xl text-white font-semibold">
+                        Google Play
+                      </p>
+                    </div>
+                  </Link>
                 </div>
               </div>
 

@@ -1,145 +1,108 @@
 "use client";
 
 import React, { useRef, useState, useEffect } from "react";
-import { Swiper, SwiperSlide } from "swiper/react";
-import { Navigation, Autoplay } from "swiper/modules";
-import "swiper/css";
-import "swiper/css/navigation";
+import Container from "@/components/layout/container/Container";
 import Image from "next/image";
-import { Swiper as SwiperType } from "swiper";
+import { FaArrowLeft, FaArrowRight } from "react-icons/fa";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Autoplay, Navigation } from "swiper/modules";
 
-interface Feature {
-  title: string;
-  description: string;
-  icon: string;
-}
+import insideData from "@/components/assets/data/inside.json";
 
-const features: Feature[] = [
-  {
-    title: "Chat with Buddies",
-    description: "Connect with friends anytime and share your thoughts.",
-    icon: "/assets/icons/icon1.png",
-  },
-  {
-    title: "Voice Calls",
-    description:
-      "Calls that feel like company. Sometimes hearing someone is all it takes to feel less alone.",
-    icon: "/assets/icons/icon2.png",
-  },
-  {
-    title: "Daily Quiz Challenge",
-    description: "Take a fun daily quiz to challenge your knowledge.",
-    icon: "/assets/icons/icon3.png",
-  },
-  {
-    title: "Zonely Coins",
-    description: "Earn and use Zonely Coins for rewards and perks.",
-    icon: "/assets/icons/icon4.png",
-  },
-  {
-    title: "Mood o’ Meter",
-    description:
-      "Check in with your moods, daily. Track how you’re feeling, reflect on your mood and earn rewards for simply showing up.",
-    icon: "/assets/icons/icon5.png",
-  },
-];
+// Define the type for the Swiper instance
+import type { Swiper as SwiperType } from "swiper";
 
 const WhatsInsideSection: React.FC = () => {
-  const prevRef = useRef<HTMLDivElement>(null);
-  const nextRef = useRef<HTMLDivElement>(null);
-  const [swiperReady, setSwiperReady] = useState(false);
   const swiperRef = useRef<SwiperType | null>(null);
 
-  useEffect(() => {
-    setSwiperReady(true);
-  }, []);
-
   return (
-    <section className="bg-orange-50 py-16" id="inside">
-      <div className="text-center mb-10">
-        <h2 className="text-3xl font-bold text-gray-900">What’s Inside</h2>
-        <div className="w-20 h-1 bg-orange-500 mt-2 mb-6 rounded-full inline-block"></div>
-        <p className="text-gray-600 mt-4 max-w-2xl mx-auto">
-          From casual chats to quick laughs, Zonely makes space for the
-          conversations you need most
-        </p>
-      </div>
-
-      <div className="max-w-6xl mx-auto relative">
-        {swiperReady && (
-          <Swiper
-            modules={[Navigation, Autoplay]}
-            spaceBetween={20}
-            slidesPerView={1}
-            breakpoints={{
-              640: { slidesPerView: 2 },
-              1024: { slidesPerView: 3 },
-              1280: { slidesPerView: 4 },
-            }}
-            autoplay={{
-              delay: 3000, // 3 seconds delay between slides
-              disableOnInteraction: false, // Continue autoplay after user interaction
-            }}
-            navigation={{
-              prevEl: prevRef.current,
-              nextEl: nextRef.current,
-            }}
-            onSwiper={(swiper) => {
-              swiperRef.current = swiper;
-            }}
-          >
-            {features.map((feature, id) => (
-              <SwiperSlide key={id} className="py-10">
-                <div
-                  className="relative bg-white rounded-2xl shadow-xl flex flex-col items-center justify-center cursor-pointer overflow-hidden group h-64"
-                  onMouseEnter={() => swiperRef.current?.autoplay.stop()}
-                  onMouseLeave={() => swiperRef.current?.autoplay.start()}
-                >
-                  {/* Default view */}
-                  <div className="flex flex-col items-center justify-center absolute inset-0 z-10 transform transition-all duration-500 ease-in-out group-hover:-translate-y-10 group-hover:opacity-0">
-                    <Image
-                      src={feature.icon}
-                      alt={feature.title}
-                      width={64}
-                      height={64}
-                      className="mb-2"
-                    />
-                    <h3 className="font-semibold text-lg mt-4">
-                      {feature.title}
-                    </h3>
-                  </div>
-
-                  {/* Hover view */}
-                  <div className="absolute inset-0 bg-gradient-to-t from-orange-500 to-orange-400 text-white flex flex-col items-center justify-center px-4 py-6 transform translate-y-full transition-all duration-500 ease-in-out group-hover:translate-y-0 group-hover:opacity-100">
-                    <h3 className="font-semibold text-lg text-center">
-                      {feature.title}
-                    </h3>
-                    <p className="text-sm text-center mt-2">
-                      {feature.description}
-                    </p>
-                  </div>
-                </div>
-              </SwiperSlide>
-            ))}
-          </Swiper>
-        )}
-
-        {/* Navigation arrows BELOW the slider, centered */}
-        <div className="flex justify-center gap-6 mt-6">
-          <div
-            ref={prevRef}
-            className="w-10 h-10 rounded-full bg-white shadow flex items-center justify-center text-orange-500 text-lg cursor-pointer select-none"
-          >
-            &#8592;
+    <section className="padding" id="inside">
+      <Container width>
+        <section>
+          <div className="flex flex-col items-center  mb-10">
+            <h2 className="title mb-2">What’s Inside</h2>
+            <div className="w-20 h-1 bg-[var(--primary)] mb-4  rounded-full" />
+            <p className="text-center">
+              From casual chats to quick laughs, Zonely makes space for the
+              conversations you need most
+            </p>
           </div>
-          <div
-            ref={nextRef}
-            className="w-10 h-10 rounded-full bg-white shadow flex items-center justify-center text-orange-500 text-lg cursor-pointer select-none"
-          >
-            &#8594;
+
+          <div className="relative">
+            <div>
+              <Swiper
+                onSwiper={(swiper) => (swiperRef.current = swiper)}
+                spaceBetween={30}
+                slidesPerView={1}
+                loop={true}
+                navigation={{
+                  nextEl: ".button-next-slide",
+                  prevEl: ".button-prev-slide",
+                }}
+                breakpoints={{
+                  350: {
+                    slidesPerView: 1,
+                  },
+                  650: {
+                    slidesPerView: 2,
+                  },
+                  1024: {
+                    slidesPerView: 4,
+                  },
+                }}
+                autoplay={{
+                  delay: 3000,
+                  disableOnInteraction: false,
+                }}
+                modules={[Navigation, Autoplay]}
+                className="mySwiper"
+              >
+                {insideData.map((item, id) => (
+                  <SwiperSlide key={id} className="py-10">
+                    <div
+                      className="relative bg-white rounded-2xl shadow-xl flex flex-col items-center justify-center cursor-pointer overflow-hidden group h-64"
+                      onMouseEnter={() => swiperRef.current?.autoplay.stop()}
+                      onMouseLeave={() => swiperRef.current?.autoplay.start()}
+                    >
+                      {/* Default view */}
+                      <div className="flex flex-col items-center justify-center absolute inset-0 z-10 transform transition-all duration-500 ease-in-out group-hover:-translate-y-10 group-hover:opacity-0">
+                        <Image
+                          src={item.icon}
+                          alt={item.title}
+                          width={64}
+                          height={64}
+                          className="mb-2"
+                        />
+                        <h3 className="font-semibold text-lg mt-4">
+                          {item.title}
+                        </h3>
+                      </div>
+
+                      {/* Hover view */}
+                      <div className="absolute inset-0 bg-gradient-to-t from-orange-500 to-orange-400 text-white flex flex-col items-center justify-center px-4 py-6 transform translate-y-full transition-all duration-500 ease-in-out group-hover:translate-y-0 group-hover:opacity-100">
+                        <h3 className="subTitle">{item.title}</h3>
+                        <p className=" text-center  text-white">
+                          {item.description}
+                        </p>
+                      </div>
+                    </div>
+                  </SwiperSlide>
+                ))}
+              </Swiper>
+            </div>
+
+            {/* Navigation arrows BELOW the slider, centered */}
+            <div className="flex  items-center justify-center gap-5  z-10">
+              <div className="button-prev-slide  text-[20px] font-medium border-2 border-[var(--text)]  rounded-full p-2">
+                <FaArrowLeft />
+              </div>
+              <div className="button-next-slide text-[20px] font-medium border-2 border-[var(--text)]  rounded-full p-2">
+                <FaArrowRight />
+              </div>
+            </div>
           </div>
-        </div>
-      </div>
+        </section>
+      </Container>
     </section>
   );
 };

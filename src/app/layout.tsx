@@ -3,6 +3,7 @@ import "./globals.css";
 import Header from "@/components/layout/header/Header";
 import Footer from "@/components/layout/footer/Footer";
 import { Container } from "lucide-react";
+import { Onest } from "next/font/google";
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -15,6 +16,12 @@ import "swiper/css/navigation";
 import "swiper/css/effect-coverflow";
 import "swiper/css/grid";
 
+const onest = Onest({
+  subsets: ["latin"],
+  weight: ["100", "200", "300", "400", "500", "600", "700", "800", "900"],
+  variable: "--font-body",
+});
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -22,7 +29,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`antialiased`}>
+      <body className={`${onest.variable} antialiased`}>
         {/* <Container /> */}
         <Header />
         {children}

@@ -1,0 +1,32 @@
+[
+  {
+    "id": 1,
+    "title": "Chat with Buddies",
+    "description": "Connect with friends anytime and share your thoughts.",
+    "icon": "/assets/icons/icon1.png"
+  },
+  {
+    "id": 2,
+    "title": "Voice Calls",
+    "description": "Calls that feel like company. Sometimes hearing someone is all it takes to feel less alone.",
+    "icon": "/assets/icons/icon2.png"
+  },
+  {
+    "id": 3,
+    "title": "Daily Quiz Challenge",
+    "description": "Take a fun daily quiz to challenge your knowledge.",
+    "icon": "/assets/icons/icon3.png"
+  },
+  {
+    "id": 3,
+    "title": "Zonely Coins",
+    "description": "Earn and use Zonely Coins for rewards and perks.",
+    "icon": "/assets/icons/icon4.png"
+  },
+  {
+    "id": 4,
+    "title": "Mood o’ Meter",
+    "description": "Check in with your moods, daily. Track how you’re feeling, reflect on your mood and earn rewards for simply showing up.",
+    "icon": "/assets/icons/icon5.png"
+  }
+]

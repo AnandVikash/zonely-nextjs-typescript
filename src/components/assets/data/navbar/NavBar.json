@@ -1,0 +1,27 @@
+[
+  {
+    "id": 1,
+    "title": "Home",
+    "link": "/"
+  },
+  {
+    "id": 2,
+    "title": "What is Zonely",
+    "link": "#what-is-zonely"
+  },
+  {
+    "id": 3,
+    "title": "What’s Inside",
+    "link": "#whats-inside"
+  },
+  {
+    "id": 4,
+    "title": "Buddy Zone",
+    "link": "#buddy-zone"
+  },
+  {
+    "id": 5,
+    "title": "Contact Us",
+    "link": "#contact-us"
+  }
+]

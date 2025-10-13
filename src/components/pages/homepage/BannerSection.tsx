@@ -21,7 +21,6 @@ const BannerSection: React.FC = () => {
           <div className='relative z-10 bg-[url("/assets/banner/banner12.jpg")] bg-cover bg-no-repeat bg-top-right backdrop-blur-sm min-h-[300px] lg:min-h-[400px] flex'>
             <Container className="flex flex-col-reverse lg:flex-row items-center justify-between w-full h-full py-6 lg:py-16 gap-6 relative">
 
-
               <div className="order-2 lg:order-1 text-center lg:text-left max-w-xl self-center z-10">
                 <h1 className="text-3xl md:text-5xl font-bold leading-tight text-gray-900">
                   You don’t have to keep it all inside share it here

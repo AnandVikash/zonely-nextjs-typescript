@@ -116,9 +116,9 @@ const FeedbackSection: React.FC = () => {
             impact we create every day.
           </p>
 
-          <button className="bg-orange-500 hover:bg-orange-600 text-white px-6 py-3 rounded-md font-semibold transition">
+          {/* <button className="bg-orange-500 hover:bg-orange-600 text-white px-6 py-3 rounded-md font-semibold transition">
             View More
-          </button>
+          </button> */}
         </div>
 
         {/* Right side: testimonial cards */}
@@ -214,7 +214,7 @@ const FeedbackSection: React.FC = () => {
                     index === Math.floor(currentCardIndex / 1)
                       ? "bg-orange-500"
                       : "bg-gray-300"
-                  }`}
+                    }`}
                   aria-label={`Go to testimonial group ${index + 1}`}
                 />
               ))}

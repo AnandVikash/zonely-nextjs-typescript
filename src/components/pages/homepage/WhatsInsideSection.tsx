@@ -65,7 +65,7 @@ const WhatsInsideSection: React.FC = () => {
                       onMouseLeave={() => swiperRef.current?.autoplay.start()}
                     >
                       {/* Default view */}
-                      <div className="flex flex-col items-center justify-center absolute inset-0 z-10 transform transition-all duration-500 ease-in-out group-hover:-translate-y-10 group-hover:opacity-0">
+                      <div className="flex flex-col items-center justify-center absolute inset-0 z-10 transform transition-all duration-500 ease-in-out opacity-0 sm:opacity-100 group-hover:-translate-y-10 group-hover:opacity-0">
                         <Image
                           src={item.icon}
                           alt={item.title}
@@ -79,7 +79,7 @@ const WhatsInsideSection: React.FC = () => {
                       </div>
 
                       {/* Hover view */}
-                      <div className="absolute inset-0 bg-gradient-to-t from-orange-500 to-orange-400 text-white flex flex-col items-center justify-center px-4 py-6 transform translate-y-full transition-all duration-500 ease-in-out group-hover:translate-y-0 group-hover:opacity-100">
+                      <div className="absolute inset-0 bg-gradient-to-t from-orange-500 to-orange-400 text-white flex flex-col items-center justify-center px-4 py-6 transform sm:translate-y-full transition-all duration-500 ease-in-out opacity-100 sm:opacity-0 group-hover:translate-y-0 group-hover:opacity-100">
                         <h3 className="subTitle">{item.title}</h3>
                         <p className=" text-center  text-white">
                           {item.description}

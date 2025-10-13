@@ -10,6 +10,17 @@ const AboutSection: React.FC = () => {
       <Container width>
         <section className="grid grid-cols-1 sm:grid-cols-2 justify-between items-center gap-10 ">
           <div className="">
+            <div className="block sm:hidden">
+
+              <h2 className="title">What is Zonely?</h2>
+
+              {/* Styled separate line */}
+              <p className="mb-2">
+                It’s not therapy. It’s not dating. It’s just talking & chatting —
+                Zonely style.
+              </p>
+              <div className="w-20 h-[3px] bg-[var(--primary)] rounded-full  mb-5 "></div>
+            </div>
             <Image
               src="/assets/aboutus/aboutus.png"
               alt="About Us"
@@ -20,15 +31,18 @@ const AboutSection: React.FC = () => {
           </div>
 
           <div className="">
-            <h2 className="title">What is Zonely?</h2>
+            <div className="hidden sm:block">
 
-            {/* Styled separate line */}
-            <p className="mb-2">
-              It’s not therapy. It’s not dating. It’s just talking & chatting —
-              Zonely style.
-            </p>
+              <h2 className="title">What is Zonely?</h2>
 
-            <div className="w-20 h-[3px] bg-[var(--primary)] rounded-full  mb-5 "></div>
+              {/* Styled separate line */}
+              <p className="mb-2">
+                It’s not therapy. It’s not dating. It’s just talking & chatting —
+                Zonely style.
+              </p>
+              <div className="w-20 h-[3px] bg-[var(--primary)] rounded-full  mb-5 "></div>
+            </div>
+
 
             <p className="mb-5">
               Zonely is your everyday space to just talk and chat — no labels,

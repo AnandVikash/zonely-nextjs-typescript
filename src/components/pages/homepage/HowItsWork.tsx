@@ -16,13 +16,13 @@ const HowItsWork = () => {
     <section className="padding " id="work">
       <Container width>
         <section className="">
-          <div className="flex flex-col items-center   mb-10 sm:mb-25">
+          <div className="flex flex-col items-center mb-10 sm:mb-25">
             <h2 className="title mb-2">How It Works</h2>
             <div className="w-20 h-1 bg-[var(--primary)]  rounded-full" />
           </div>
           {/* Desktop Grid */}
           <div className="hidden sm:grid grid-cols-1 sm:grid-cols-3 gap-30 sm:gap-10 relative py-10 sm:py-20 ">
-            <div className="flex flex-col items-center justify-center p-5 shadow-2xl rounded-xl  relative pt-24 bg-white mb-5 sm:mb-0">
+            <div className="border border-gray-200 flex flex-col items-center justify-center p-5 shadow-2xl rounded-xl  relative pt-24 bg-white mb-5 sm:mb-0">
               <div className="absolute -top-28">
                 <Image
                   src="/assets/work/pickyouevibe.png"
@@ -33,7 +33,7 @@ const HowItsWork = () => {
                 />
               </div>
               <div className="flex flex-col justify-center items-center ">
-                <p className="text-orange-500 mb-2  tracking-[4] font-medium ">
+                <p className="text-[var(--primary)] mb-2  tracking-[4] font-medium ">
                   STEP 1
                 </p>
                 <h3 className="text-2xl font-medium mb-3">Pick your vibe</h3>
@@ -43,9 +43,9 @@ const HowItsWork = () => {
                 </p>
               </div>
             </div>
-            <div className="hidden sm:block w-20 h-1 bg-orange-500 mt-2 mb-6  absolute bottom-70 left-90 -z-1"></div>
+            <div className="hidden sm:block w-20 h-1 bg-[var(--primary)] mt-2 mb-6  absolute bottom-70 left-90 -z-1"></div>
 
-            <div className="flex flex-col items-center justify-center p-5 shadow-2xl rounded-xl  relative pt-24 bg-white mb-8 sm:mb-0">
+            <div className="border border-gray-200 flex flex-col items-center justify-center p-5 shadow-2xl rounded-xl  relative pt-24 bg-white mb-8 sm:mb-0">
               <div className="absolute -top-35">
                 <Image
                   src="/assets/work/startachat.png"
@@ -56,7 +56,7 @@ const HowItsWork = () => {
                 />
               </div>
               <div className="flex flex-col justify-center items-center ">
-                <p className="text-orange-500   mb-2 tracking-[4] font-medium ">
+                <p className="text-[var(--primary)]   mb-2 tracking-[4] font-medium ">
                   STEP 2
                 </p>
                 <h3 className="text-2xl font-medium mb-3">Start the chat</h3>
@@ -68,9 +68,9 @@ const HowItsWork = () => {
               </div>
             </div>
 
-            <div className="hidden sm:block w-20 h-1 bg-orange-500 mt-2 mb-6  absolute bottom-30 right-90 -z-50 "></div>
+            <div className="hidden sm:block w-20 h-1 bg-[var(--primary)] mt-2 mb-6  absolute bottom-30 right-90 -z-50 "></div>
 
-            <div className="flex flex-col items-center justify-center p-5 shadow-2xl rounded-xl  relative pt-24 bg-white">
+            <div className="border border-gray-200 flex flex-col items-center justify-center p-5 shadow-2xl rounded-xl  relative pt-24 bg-white">
               <div className="absolute -top-35">
                 <Image
                   src="/assets/work/enjoythemovement.png"
@@ -81,7 +81,7 @@ const HowItsWork = () => {
                 />
               </div>
               <div className="flex flex-col justify-center items-center ">
-                <p className="text-orange-500 tracking-[4] font-medium  mb-2 ">
+                <p className="text-[var(--primary)] tracking-[4] font-medium  mb-2 ">
                   STEP 3
                 </p>
                 <h3 className="text-2xl font-medium mb-3">Enjoy the moment</h3>
@@ -195,10 +195,10 @@ const HowItsWork = () => {
               </Swiper>
             </div>
             <div className="flex  items-center justify-center gap-5  z-10">
-              <div className="prev-slide  text-[20px] font-medium border-2 border-[var(--text)]  rounded-full p-2">
+              <div className="prev-slide  text-[20px] font-medium border-2 border-[var(--text)]  rounded-full p-2 hover:border-[var(--primary)] hover:text-[var(--primary)]">
                 <FaArrowLeft />
               </div>
-              <div className="next-slide text-[20px] font-medium border-2 border-[var(--text)]  rounded-full p-2">
+              <div className="next-slide text-[20px] font-medium border-2 border-[var(--text)]  rounded-full p-2 hover:border-[var(--primary)] hover:text-[var(--primary)]">
                 <FaArrowRight />
               </div>
             </div>

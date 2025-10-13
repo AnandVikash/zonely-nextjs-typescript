@@ -60,12 +60,12 @@ const WhatsInsideSection: React.FC = () => {
                 {insideData.map((item, id) => (
                   <SwiperSlide key={id} className="py-10">
                     <div
-                      className="relative bg-white rounded-2xl shadow-xl flex flex-col items-center justify-center cursor-pointer overflow-hidden group h-64"
+                      className="relative bg-white rounded-2xl shadow-xl flex flex-col items-center justify-center border border-gray-200 cursor-pointer overflow-hidden group h-64"
                       onMouseEnter={() => swiperRef.current?.autoplay.stop()}
                       onMouseLeave={() => swiperRef.current?.autoplay.start()}
                     >
                       {/* Default view */}
-                      <div className="flex flex-col items-center justify-center absolute inset-0 z-10 transform transition-all duration-500 ease-in-out opacity-0 sm:opacity-100 group-hover:-translate-y-10 group-hover:opacity-0">
+                      <div className="flex flex-col items-center justify-center absolute inset-0 z-10 transform transition-all duration-500 ease-in-out group-hover:-translate-y-10 group-hover:opacity-0 ">
                         <Image
                           src={item.icon}
                           alt={item.title}
@@ -79,7 +79,7 @@ const WhatsInsideSection: React.FC = () => {
                       </div>
 
                       {/* Hover view */}
-                      <div className="absolute inset-0 bg-gradient-to-t from-orange-500 to-orange-400 text-white flex flex-col items-center justify-center px-4 py-6 transform sm:translate-y-full transition-all duration-500 ease-in-out opacity-100 sm:opacity-0 group-hover:translate-y-0 group-hover:opacity-100">
+                      <div className="absolute inset-0 bg-linear-[var(--lgs)] text-white flex flex-col items-center justify-center px-4 py-6 transform translate-y-full transition-all duration-500 ease-in-out group-hover:translate-y-0 group-hover:opacity-100">
                         <h3 className="subTitle">{item.title}</h3>
                         <p className=" text-center  text-white">
                           {item.description}
@@ -93,10 +93,10 @@ const WhatsInsideSection: React.FC = () => {
 
             {/* Navigation arrows BELOW the slider, centered */}
             <div className="flex  items-center justify-center gap-5  z-10">
-              <div className="button-prev-slide  text-[20px] font-medium border-2 border-[var(--text)]  rounded-full p-2">
+              <div className="button-prev-slide text-[20px] font-medium border-2 border-[var(--text)] rounded-full p-2 hover:border-[var(--primary)] hover:text-[var(--primary)]">
                 <FaArrowLeft />
               </div>
-              <div className="button-next-slide text-[20px] font-medium border-2 border-[var(--text)]  rounded-full p-2">
+              <div className="button-next-slide text-[20px] font-medium border-2 border-[var(--text)]  rounded-full p-2 hover:border-[var(--primary)] hover:text-[var(--primary)]">
                 <FaArrowRight />
               </div>
             </div>

@@ -115,10 +115,10 @@ const WhyChooseUs: React.FC = () => {
               </Swiper>
             </div>
             <div className="flex  items-center justify-center gap-5  z-10">
-              <div className="choose-prev-slide  text-[20px] font-medium border-2 border-[var(--text)]  rounded-full p-2">
+              <div className="choose-prev-slide  text-[20px] font-medium border-2 border-[var(--text)]  rounded-full p-2 hover:border-[var(--primary)] hover:text-[var(--primary)]">
                 <FaArrowLeft />
               </div>
-              <div className="choose-next-slide text-[20px] font-medium border-2 border-[var(--text)]  rounded-full p-2">
+              <div className="choose-next-slide text-[20px] font-medium border-2 border-[var(--text)]  rounded-full p-2 hover:border-[var(--primary)] hover:text-[var(--primary)]">
                 <FaArrowRight />
               </div>
             </div>

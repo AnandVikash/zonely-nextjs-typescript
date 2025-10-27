@@ -6,37 +6,37 @@ import Container from "@/components/layout/container/Container";
 const testimonials = [
   {
     id: 1,
-    text: "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.",
+    text: "Zonely feels like a space where I can just be myself — no judgment, no pressure.",
     name: "Client 1",
     profession: "Profession 1",
   },
   {
     id: 2,
-    text: "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.",
+    text: "Talking on Zonely helped me clear my head when I needed it most.",
     name: "Client 2",
     profession: "Profession 2",
   },
   {
     id: 3,
-    text: "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.",
+    text: "It’s comforting to know I can share what’s on my mind anytime.",
     name: "Client 3",
     profession: "Profession 3",
   },
   {
     id: 4,
-    text: "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.",
+    text: "Sometimes, all I need is someone to listen — and Zonely gives me that.",
     name: "Client 4",
     profession: "Profession 4",
   },
   {
     id: 5,
-    text: "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.",
+    text: "I never thought chatting with a stranger could feel this genuine.",
     name: "Client 5",
     profession: "Profession 5",
   },
   {
     id: 6,
-    text: "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.",
+    text: "Zonely helped me feel heard, understood, and a little less alone.",
     name: "Client 6",
     profession: "Profession 6",
   },
@@ -200,20 +200,13 @@ const FeedbackSection: React.FC = () => {
 
             {/* Pagination Bullets - Positioned on the right */}
             <div className="absolute top-1/2 right-1 transform -translate-y-1/2 flex flex-col gap-2">
-              {/* The loop now only runs for 3 bullets */}
               {Array.from({ length: 4 }).map((_, index) => (
                 <button
                   key={index}
-                  onClick={() => {
-                    // You would need to map these to specific testimonials if you want them clickable
-                    // For example, 0 -> testimonial 1, 1 -> testimonial 3, 2 -> testimonial 5
-                    // Or simply remove the onClick to make them purely visual
-                  }}
-                  className={`w-2 h-8 rounded-full transition-colors ${
-                    // You'll need to define the active state logic for three bullets
-                    index === Math.floor(currentCardIndex / 1)
-                      ? "bg-orange-500"
-                      : "bg-gray-300"
+                  onClick={() => { }}
+                  className={`w-2 h-8 rounded-full transition-colors ${index === Math.floor(currentCardIndex / 1)
+                    ? "bg-orange-500"
+                    : "bg-gray-300"
                     }`}
                   aria-label={`Go to testimonial group ${index + 1}`}
                 />

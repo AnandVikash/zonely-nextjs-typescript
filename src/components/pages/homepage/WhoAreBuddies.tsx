@@ -7,7 +7,7 @@ const WhoAreBuddies = () => {
   return (
     <section className="bg-[#fef9f5] padding">
       <Container width>
-        <section className="sm:flex justify-between gap-10">
+        <section className="sm:grid grid-cols-2 justify-between gap-10">
           <div className="">
             <Image
               src="/assets/buddies/buddies.jpg"

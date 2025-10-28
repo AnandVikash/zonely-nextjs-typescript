@@ -25,16 +25,16 @@ const ContactSection: React.FC = () => {
               <div className="w-20 h-1 bg-[var(--primary)] rounded-full"></div>
             </div>
 
-            <h3 className="subTitle">
-              Lorem Ipsum is simply dummy text of the printing and typesetting
-              industry.
+            <h3 className="subTitle sm:w-[68%]">
+              For login issues, compliance queries, or anything about Zonely —
+              connect with us anytime!
             </h3>
-
+            {/* 
             <p className="mb-5">
               Lorem Ipsum is simply dummy text of the printing and typesetting
               industry. Lorem Ipsum is simply dummy text of the printing and
               typesetting industry.
-            </p>
+            </p> */}
 
             <div className="">
               <div className="flex items-center gap-3">

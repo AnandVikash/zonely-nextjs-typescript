@@ -17,7 +17,7 @@ import { useParams } from "next/navigation";
 import Sidebar from "./Sidebar";
 
 const Header = () => {
-  const [activeLink, setActiveLink] = useState("null"); // Set default active link
+  const [activeLink, setActiveLink] = useState("null");
   const [sidebar, setSidebar] = useState(false);
 
   const params = useParams();
@@ -46,11 +46,10 @@ const Header = () => {
                   key={index}
                   href={item.link}
                   onClick={() => setActiveLink(item.link)}
-                  className={`hover:text-[var(--black)] font-medium ${
-                    activeLink === item.link
-                      ? "bg-[var(--white)] text-[--white]"
-                      : ""
-                  }`}
+                  className={`hover:text-[var(--black)] font-medium ${activeLink === item.link
+                    ? "bg-[var(--white)] text-[--white]"
+                    : ""
+                    }`}
                 >
                   {item.title}
                 </Link>

@@ -36,32 +36,30 @@ const Buddyform: React.FC = () => {
   return (
     <div className="container mx-auto">
       <section
-        className="relative flex justify-center items-center min-h-screen bg-cover bg-center bg-no-repeat"
+        className="relative flex flex-col justify-center items-center min-h-screen bg-cover bg-center bg-no-repeat"
         style={{
           backgroundImage: "url('https://placehold.jp/1920x1080.png')",
         }}
       >
-        <div className="absolute inset-0 bg-black/30"></div>
 
-        <div className="relative z-10 px-4 py-20 w-full">
-          <div className="max-w-5xl mx-auto bg-white/10 backdrop-blur-2xl border border-white rounded-2xl shadow-lg p-10 text-center">
-            <h2 className="text-3xl font-semibold mb-3 text-gray-900">
+        <div className="relative z-10 px-4 py-10 w-full flex justify-center">
+          <div className="max-w-5xl w-full bg-white/10 backdrop-blur-lg border border-white/20 rounded-2xl shadow-2xl p-10 text-center">
+            <h2 className="text-3xl md:text-4xl font-bold mb-4 text-gray-900">
               Join{" "}
-              <span className=" underline decoration-orange-500">
-                Zonely
-              </span>{" "}
-              as a buddy
+              <span className="underline decoration-orange-500">Zonely</span> as
+              a buddy
             </h2>
 
-            <p className="text-gray-800 mb-1">
+            <p className="text-gray-900 text-base mb-1">
               Connect, chat, earn in a safe, verified space built for genuine
               conversations.
             </p>
-            <p className="text-gray-800 mb-8">
-              Fill out this form and we'll reach out for a quick conversation
+            <p className="text-gray-900 text-base mb-8">
+              Fill out this form and we&apos;ll reach out for a quick conversation
             </p>
 
-            <form onSubmit={handleSubmit} className="space-y-4">
+            <form onSubmit={handleSubmit} className="space-y-5">
+
               <div className="flex flex-col md:flex-row gap-4">
                 <input
                   type="text"
@@ -70,7 +68,7 @@ const Buddyform: React.FC = () => {
                   value={formData.name}
                   onChange={handleChange}
                   required
-                  className="border border-white bg-white/60 text-white rounded-lg px-4 py-3 w-full placeholder-gray-600 focus:outline-none focus:ring-2 focus:ring-orange-400"
+                  className="rounded-lg px-4 py-3 w-full bg-white/30 text-gray-900 placeholder-gray-600 focus:outline-none focus:ring-2 focus:ring-orange-400"
                 />
                 <input
                   type="tel"
@@ -79,7 +77,7 @@ const Buddyform: React.FC = () => {
                   value={formData.mobile}
                   onChange={handleChange}
                   required
-                  className="border border-white bg-white/60 text-white rounded-lg px-4 py-3 w-full placeholder-gray-600 focus:outline-none focus:ring-2 focus:ring-orange-400"
+                  className="rounded-lg px-4 py-3 w-full bg-white/30 text-gray-900 placeholder-gray-600 focus:outline-none focus:ring-2 focus:ring-orange-400"
                 />
                 <input
                   type="email"
@@ -88,7 +86,7 @@ const Buddyform: React.FC = () => {
                   value={formData.email}
                   onChange={handleChange}
                   required
-                  className="border border-white bg-white/60 text-white rounded-lg px-4 py-3 w-full placeholder-gray-600 focus:outline-none focus:ring-2 focus:ring-orange-400"
+                  className="rounded-lg px-4 py-3 w-full bg-white/30 text-gray-900 placeholder-gray-600 focus:outline-none focus:ring-2 focus:ring-orange-400"
                 />
               </div>
 
@@ -98,7 +96,7 @@ const Buddyform: React.FC = () => {
                   value={formData.languages}
                   onChange={handleChange}
                   required
-                  className="border border-white bg-white/60 text-white rounded-lg px-4 py-3 w-full focus:outline-none focus:ring-2 focus:ring-orange-400"
+                  className="rounded-lg px-4 py-3 w-full bg-white/30 text-gray-900 placeholder-gray-600 focus:outline-none focus:ring-2 focus:ring-orange-400"
                 >
                   <option value="">Select languages</option>
                   <option value="English">English</option>
@@ -111,16 +109,16 @@ const Buddyform: React.FC = () => {
                 <input
                   type="text"
                   name="hobbies"
-                  placeholder="Your interest or hobbies"
+                  placeholder="Your interests or hobbies"
                   value={formData.hobbies}
                   onChange={handleChange}
                   required
-                  className="border border-white bg-white/60 text-white rounded-lg px-4 py-3 w-full placeholder-gray-600 focus:outline-none focus:ring-2 focus:ring-orange-400"
+                  className="rounded-lg px-4 py-3 w-full bg-white/30 text-gray-900 placeholder-gray-600 focus:outline-none focus:ring-2 focus:ring-orange-400"
                 />
 
                 <label
                   htmlFor="photo-upload"
-                  className="flex items-center justify-center border border-dashed border-white bg-white/60 text-white rounded-lg px-4 py-3 cursor-pointer w-full hover:bg-white/80 transition"
+                  className="flex items-center justify-center rounded-lg px-4 py-3 w-full bg-white/30 text-gray-800 border border-dashed border-gray-400 cursor-pointer hover:bg-white/40 transition"
                 >
                   ＋ Upload your recent photo
                   <input
@@ -139,7 +137,7 @@ const Buddyform: React.FC = () => {
                 value={formData.reason}
                 onChange={handleChange}
                 required
-                className="border border-white bg-white/60 text-white rounded-lg px-4 py-3 w-full placeholder-gray-600 focus:outline-none focus:ring-2 focus:ring-orange-400"
+                className="rounded-lg px-4 py-3 w-full bg-white/30 text-gray-900 placeholder-gray-600 focus:outline-none focus:ring-2 focus:ring-orange-400"
               />
 
               <button
@@ -149,11 +147,15 @@ const Buddyform: React.FC = () => {
                 Apply Now
               </button>
             </form>
-
-            <div className="text-gray-800 mt-8 text-sm">
-              Scroll Down For More
-            </div>
           </div>
+        </div>
+
+
+        <div className="mt-6 flex flex-col items-center z-10">
+          <p className="text-gray-800 text-sm font-semibold mb-2 tracking-wide">
+            Scroll Down For More
+          </p>
+          <div className="text-orange-500 text-3xl animate-bounce">↓ </div>
         </div>
       </section>
     </div>

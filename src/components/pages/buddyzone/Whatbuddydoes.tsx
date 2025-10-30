@@ -47,7 +47,8 @@ const Whatbuddydoes: React.FC = () => {
             </h2>
             <div className="w-16 h-[3px] bg-orange-500 mb-4"></div>
             <p className="text-gray-600 mb-8">
-              You don’t have to counsel — just connect and care.
+              Earn by talking / Chatting — simple, safe, and on your own time
+
             </p>
 
             <div className="space-y-6">

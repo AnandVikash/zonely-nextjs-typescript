@@ -25,9 +25,9 @@ const Whybuddy: React.FC = () => {
 
   return (
     <Container width>
-      <section className="bg-[#fff6f0] py-20 text-center">
+      <section className="bg-[#fff6f0] py-24 text-center">
         <div className="max-w-6xl mx-auto">
-          {/* Heading */}
+
           <h2 className="text-3xl font-semibold text-gray-900 mb-2">
             Why Become a Zonely Buddy?
           </h2>
@@ -36,7 +36,7 @@ const Whybuddy: React.FC = () => {
             Earn by talking and chatting – it’s as simple as that.
           </p>
 
-          {/* Cards */}
+
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 justify-center">
             {features.map((feature, index) => (
               <div

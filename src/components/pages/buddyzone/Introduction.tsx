@@ -12,7 +12,7 @@ const Introduction: React.FC = () => {
 
 
           <img
-            src="https://placehold.jp/800x500.png"
+            src="/assets/buddyzone/introduction.png"
             alt="Zonely Buddy"
             className="relative z-10 w-[80%] object-contain"
           />

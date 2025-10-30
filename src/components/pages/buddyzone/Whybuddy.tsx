@@ -6,19 +6,19 @@ import Container from "@/components/layout/container/Container";
 const Whybuddy: React.FC = () => {
   const features = [
     {
-      img: "https://placehold.jp/128x128.png",
+      img: "/assets/buddyzone/why/earn-for-every-conversation.png",
       title: "Earn for every conversation",
     },
     {
-      img: "https://placehold.jp/128x128.png",
+      img: "/assets/buddyzone/why/working-time.png",
       title: "Choose your own hours and location of your choice",
     },
     {
-      img: "https://placehold.jp/128x128.png",
+      img: "/assets/buddyzone/why/shield.png",
       title: "Safe, verified environment",
     },
     {
-      img: "https://placehold.jp/128x128.png",
+      img: "/assets/buddyzone/why/communication.png",
       title: "Just clean, respectful conversations",
     },
   ];

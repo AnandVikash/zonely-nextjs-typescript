@@ -6,19 +6,19 @@ import Container from "@/components/layout/container/Container";
 const Whatbuddydoes: React.FC = () => {
   const items = [
     {
-      img: "https://placehold.jp/50x50.png",
+      img: "/assets/buddyzone/what/compassion 1.png",
       text: "Have casual, respectful conversations.",
     },
     {
-      img: "https://placehold.jp/50x50.png",
+      img: "/assets/buddyzone/what/positive-vibes 1.png",
       text: "Listen, engage, and keep things positive and light.",
     },
     {
-      img: "https://placehold.jp/50x50.png",
+      img: "/assets/buddyzone/what/relationship 1.png",
       text: "Follow community guidelines to keep zonely safe for everyone.",
     },
     {
-      img: "https://placehold.jp/50x50.png",
+      img: "/assets/buddyzone/what/censored 1.png",
       text: "Keep every chat safe, kind and confidential.",
     },
   ];
@@ -34,7 +34,7 @@ const Whatbuddydoes: React.FC = () => {
 
             >
               <img
-                src="https://placehold.jp/900x500.png"
+                src="/assets/buddyzone/what/what1.jpg"
                 alt="Buddy visual"
                 className="w-full h-auto rounded-2xl mix-blend-multiply"
               />

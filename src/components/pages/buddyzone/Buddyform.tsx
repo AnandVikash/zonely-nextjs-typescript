@@ -38,7 +38,7 @@ const Buddyform: React.FC = () => {
       <section
         className="relative flex flex-col justify-center items-center min-h-screen bg-cover bg-center bg-no-repeat"
         style={{
-          backgroundImage: "url('https://placehold.jp/1920x1080.png')",
+          backgroundImage: "url('/assets/buddyzone/banner.jpg')",
         }}
       >
 

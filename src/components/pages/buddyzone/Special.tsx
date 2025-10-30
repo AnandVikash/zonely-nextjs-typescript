@@ -24,7 +24,7 @@ const Special: React.FC = () => {
 
           <div className="flex justify-center md:justify-end">
             <img
-              src="https://placehold.jp/400x500.png"
+              src="/assets/buddyzone/special.png"
               alt="Zonely phone mockup"
               className="w-[320px] md:w-[420px] h-auto object-contain"
             />

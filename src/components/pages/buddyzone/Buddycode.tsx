@@ -30,7 +30,7 @@ const BuddyCode = () => {
 
             <div className="relative z-10 rounded-2xl overflow-hidden">
               <Image
-                src="https://placehold.jp/600x400.png"
+                src="/assets/buddyzone/buddycode.jpg"
                 alt="Buddy chatting"
                 width={600}
                 height={400}

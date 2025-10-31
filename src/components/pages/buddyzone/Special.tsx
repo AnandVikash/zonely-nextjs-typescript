@@ -5,7 +5,8 @@ import Container from "@/components/layout/container/Container";
 
 const Special: React.FC = () => {
   return (
-    <section className="bg-[#fff8f4] py-24 overflow-hidden">
+
+    <section className="bg-[#fff8f4] pt-0 pb-0 overflow-hidden -mt-14">
       <Container width>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
 

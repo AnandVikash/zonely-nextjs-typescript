@@ -6,11 +6,13 @@ import Container from "@/components/layout/container/Container";
 const Introduction: React.FC = () => {
   return (
     <Container width>
-      <section className="flex flex-col md:flex-row items-center justify-between gap-10 py-20">
+
+      <section
+        id="next-section"
+        className="flex flex-col md:flex-row items-center justify-between gap-10 py-20"
+      >
 
         <div className="relative flex-shrink-0 w-full md:w-1/2 flex justify-center">
-
-
           <img
             src="/assets/buddyzone/introduction.png"
             alt="Zonely Buddy"
@@ -18,7 +20,7 @@ const Introduction: React.FC = () => {
           />
         </div>
 
-        {/* Right Text Section */}
+
         <div className="w-full md:w-1/2 space-y-5">
           <h2 className="text-3xl font-semibold text-gray-900">
             Introduction

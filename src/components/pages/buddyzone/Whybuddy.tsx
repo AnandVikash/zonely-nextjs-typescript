@@ -24,10 +24,9 @@ const Whybuddy: React.FC = () => {
   ];
 
   return (
-    <Container width>
-      <section className="bg-[#fff6f0] py-24 text-center">
-        <div className="max-w-6xl mx-auto">
-
+    <section className="w-full bg-[#fff6f0] py-24">
+      <Container width>
+        <div className="text-center max-w-6xl mx-auto">
           <h2 className="text-3xl font-semibold text-gray-900 mb-2">
             Why Become a Zonely Buddy?
           </h2>
@@ -36,27 +35,38 @@ const Whybuddy: React.FC = () => {
             Earn by talking and chatting – it’s as simple as that.
           </p>
 
-
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 justify-center">
             {features.map((feature, index) => (
               <div
                 key={index}
-                className="bg-white rounded-2xl shadow-md p-10 flex flex-col items-center justify-center text-center hover:shadow-lg transition-all duration-300"
+                className="group relative bg-white rounded-2xl shadow-md p-10 flex flex-col items-center justify-center text-center overflow-hidden transition-all duration-300 hover:shadow-xl"
               >
-                <img
-                  src={feature.img}
-                  alt={feature.title}
-                  className="w-16 h-16 mb-5 object-contain"
-                />
-                <p className="text-gray-800 text-lg font-medium leading-relaxed">
-                  {feature.title}
-                </p>
+                {/* 🟠 Animated gradient background */}
+                <div
+                  className="absolute bottom-0 left-0 w-10 h-10 rounded-full scale-0 group-hover:scale-[30] transition-transform duration-700 ease-in-out z-0"
+                  style={{
+                    background:
+                      "linear-gradient(135deg, rgba(255,190,138,1) 0%, rgba(245,99,4,1) 100%)",
+                  }}
+                ></div>
+
+                {/* Foreground content */}
+                <div className="relative z-[5] flex flex-col items-center justify-center transition-colors duration-500 group-hover:text-white">
+                  <img
+                    src={feature.img}
+                    alt={feature.title}
+                    className="w-16 h-16 mb-5 object-contain transition-all duration-500 group-hover:brightness-0 group-hover:invert"
+                  />
+                  <p className="text-gray-800 text-lg font-semibold leading-relaxed group-hover:text-white">
+                    {feature.title}
+                  </p>
+                </div>
               </div>
             ))}
           </div>
         </div>
-      </section>
-    </Container>
+      </Container>
+    </section>
   );
 };
 
